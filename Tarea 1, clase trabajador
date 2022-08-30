@@ -1,0 +1,121 @@
+package clases;
+
+public class Trabajador{
+    
+    private String nombre;
+    private String apellido;
+    private int id;
+    private int salario;
+    private double salariod;
+
+    public Trabajador(String nombre, String apellido, int id, int salario) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.id = id;
+        this.salario = salario;
+    }
+
+    public Trabajador(double salariod) {
+        this.salariod = salariod;
+    }
+
+    public Trabajador() {
+    }
+  
+    
+    public String getNombre() {
+        return nombre;
+    }
+
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+   
+    public String getApellido() {
+        return apellido;
+    }
+
+    
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    
+    public int getId() {
+        return id;
+    }
+
+   
+    public void setId(int id) {
+        this.id = id;
+    }
+
+ 
+    public int getSalario() {
+        return salario;
+    }
+
+   
+    public void setSalario(int salario) {
+        this.salario = salario;
+    }
+
+    public double getSalariod() {
+        return salariod;
+    }
+
+    public void setSalariod(double salariod) {
+        this.salariod = salariod;
+    }
+    
+  
+    
+    
+}
+package clases;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+
+
+public class Principal{
+    
+    public static void main(String args[]) throws IOException{
+    
+       Trabajador trabajador1 = new Trabajador();
+       
+       InputStreamReader isr = new
+InputStreamReader(System.in);
+ BufferedReader br = new BufferedReader(isr);
+ System.out.print("Introduce el nombre del trabajador: ");
+ String nombre = br.readLine();
+ 
+ System.out.print("Introduce el apellido del trabajador: ");
+ String apellido = br.readLine();
+
+ System.out.print("Introduce el Id del trabajador: ");
+ int id;
+        id = Integer.parseInt(br.readLine());
+        
+  System.out.print("Introduce el salario del trabajador: ");
+ int salario;
+        salario = Integer.parseInt(br.readLine());   
+        
+      
+        double salariod;
+        salariod = salario/30;
+  
+  
+ 
+ System.out.println(""+"Nombre: "+nombre+"\napellido: "+apellido+"\nId: "+id+"\nsalario: "+salario);
+        System.out.println("Salario diario:"+salariod);
+
+       
+}
+    
+    }
+
